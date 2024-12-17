@@ -1,4 +1,5 @@
 import "./App.css";
+import Article from "./components/Article";
 import ArticleList from "./components/ArticleList";
 import Header from "./components/Header";
 import Welcome from "./components/Welcome";
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Welcome />}></Route>
         <Route path="/articles" element={<ArticleList />}></Route>
+        <Route path="/articles/:article_id" element={<Article />}></Route>
       </Routes>
     </>
   );
