@@ -35,6 +35,22 @@
 
 .card {
   padding: 2em;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+form {
+  padding: 10px;
+  border: 1px solid black;
+  margin: 20px;
+  border-color: blue;
+  padding: 1px;
+}
+
+.article-card {
+  padding: 1px;
+  margin: 10px 0px;
 }
 
 .read-the-docs {
