@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { getArticleByArticleId } from "../utils/api";
 import CommentList from "./CommentList";
+import Votes from "./Vote";
 
 export default function Article() {
   const { article_id } = useParams();
@@ -31,10 +32,13 @@ export default function Article() {
         <img src={article.article_img_url} />
         <p>{article.body}</p>
       </section>
+      <Votes article={article} />
       <button onClick={handleClick}>
         View comments: {article.comment_count}
       </button>
-      <p>{clicked ? <CommentList article_id={article_id} /> : null}</p>
+      {clicked ? (
+        <CommentList article_id={article_id} setClicked={setClicked} />
+      ) : null}
     </>
   );
 }
