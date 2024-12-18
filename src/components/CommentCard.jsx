@@ -10,7 +10,6 @@ export default function CommentCard({ comment }) {
       dateArr[5]
     )
   );
-  console.log(date, "<<< date");
   return (
     <section className="comment-card">
       <h3>{comment.author}</h3>

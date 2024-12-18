@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getComments } from "../utils/api";
 import CommentCard from "./CommentCard";
 
-export default function CommentList({ article_id }) {
+export default function CommentList({ article_id, setClicked }) {
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(null);
   useEffect(() => {
@@ -13,6 +13,9 @@ export default function CommentList({ article_id }) {
     });
   }, []);
   if (isLoading) return <p>Loading ...</p>;
+  if (comments.length === 0) {
+    return;
+  }
   return comments.map((comment, index) => {
     return <CommentCard key={index} comment={comment} />;
   });

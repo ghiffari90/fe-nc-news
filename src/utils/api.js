@@ -27,3 +27,11 @@ export function getComments(article_id) {
     return data;
   });
 }
+
+export function updateArticleByArticleId(article_id) {
+  return newsApi
+    .patch(`/articles/${article_id}`, { inc_votes: 1 })
+    .then(({ data }) => {
+      return data;
+    });
+}
