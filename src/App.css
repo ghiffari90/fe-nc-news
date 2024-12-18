@@ -40,7 +40,7 @@
   text-overflow: ellipsis;
 }
 
-form {
+section {
   padding: 10px;
   border: 1px solid black;
   margin: 20px;
@@ -51,7 +51,62 @@ form {
 .article-card {
   padding: 1px;
   margin: 10px 0px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  clear: both;
+  overflow: hidden;
+  display: inline-block;
 }
+
+.article-card img {
+  max-width: 100%;
+  display: block;
+}
+
+.comment-card {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  width: 100%;
+  max-width: 400px; /* Ensures the card doesn't exceed a reasonable width */
+  margin: 16px 0 16px 0; /* Centers the card horizontally */
+
+  display: flex;
+  flex-direction: column; /* Ensures content is stacked vertically */
+  align-items: flex-start; /* Aligns items to the left (not 'left') */
+  justify-content: flex-start; /* Aligns content to the top */
+
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.comment-date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 8px;
+  font-style: italic;
+  align-self: flex-end;
+}
+
+.comment-content {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* .comment-text {
+  display: inline-block;
+  font-size: calc(0.5vw + 0.5vh);
+} */
 
 .read-the-docs {
   color: #888;

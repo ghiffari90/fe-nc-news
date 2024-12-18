@@ -21,3 +21,9 @@ export function getAllArticles() {
     return data;
   });
 }
+
+export function getComments(article_id) {
+  return newsApi.get(`/articles/${article_id}/comments`).then(({ data }) => {
+    return data;
+  });
+}
